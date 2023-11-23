@@ -1,6 +1,8 @@
 import { getProject } from "@/sanity/utils";
 import { PortableText } from "@portabletext/react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   params: { project: string };
@@ -13,8 +15,17 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
+      <div className="mb-5 flex items-center justify-start">
+        <Link
+          href={"/"}
+          className="flex flex-row items-center bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-lg font-semibold text-gray-600 transition"
+        >
+          <ArrowLeft className="w-5 h-5" /> <span className="ml-1">Back</span>
+        </Link>
+      </div>
+
       <header className="flex justify-between items-center">
-        <h1 className="font-extrabold text-5xl drop-shadow bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="font-extrabold text-5xl drop-shadow bg-gradient-to-r from-green-500 via-teal-600 to-blue-950 bg-clip-text text-transparent">
           {project.name}
         </h1>
 
@@ -23,7 +34,7 @@ export default async function Project({ params }: Props) {
           title="View project"
           target="_blank"
           rel="noopener norefer"
-          className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transition"
+          className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-teal-700 hover:text-slate-100 transition"
         >
           View Project
         </a>

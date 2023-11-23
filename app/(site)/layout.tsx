@@ -1,6 +1,7 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import { getPages } from "@/sanity/utils";
 import type { Metadata } from "next";
-import Link from "next/link";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -18,28 +19,10 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto py-10">
-        <header className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent ext-lg font-bold"
-          >
-            Luca
-          </Link>
-
-          <div className="flex items-center gap-5 text-sm text-gray-600">
-            {pages.map((page) => (
-              <Link
-                key={page._id}
-                href={`/${page.slug}`}
-                className="hover:underline"
-              >
-                {page.title}
-              </Link>
-            ))}
-          </div>
-        </header>
-        <main className="py-20">{children}</main>
+      <body className="no-scrollbar">
+        <Navbar pages={pages} />
+        <main className="mx-auto max-w-7xl p-6 lg:px-8 py-20">{children}</main>
+        <Footer />
       </body>
     </html>
   );
