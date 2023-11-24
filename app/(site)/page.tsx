@@ -9,20 +9,24 @@ export default async function Home() {
     <div>
       <h1 className="text-7xl font-extrabold">
         Hello I&apos;m{" "}
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-green-500 via-teal-600 to-blue-950 bg-clip-text text-transparent">
           Luca
         </span>
       </h1>
       <p className="mt-3 text-xl text-gray-600">
-        Hello everyone! Check out my projects
+        I like MTB 🚵‍♀️, wine 🍷 and building fun projects with the latest tech 👨‍💻
       </p>
+      <p className="mt-3 text-xl text-gray-600">Enjoy you visit 😄</p>
 
-      <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Projects</h2>
+      <h2 className="mt-24 font-bold text-gray-800 text-3xl">💻 My Projects</h2>
+      <p className="text-lg mt-2 text-gray-600">
+        Here you can find all my coding projects
+      </p>
 
       <div className="mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
         {projects.map((project) => (
           <Link
-            className="border-2 border-gray-500 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition"
+            className="border-4 border-slate-200 rounded-lg hover:scale-105 hover:border-teal-600 transition"
             key={project._id}
             href={`/projects/${project.slug}`}
           >
@@ -30,13 +34,15 @@ export default async function Home() {
               <Image
                 src={project.image}
                 alt={project.name}
-                width={750}
-                height={300}
-                className="rounded-lg object-cover border border-gray-500"
+                width={400}
+                height={400}
+                className="rounded-lg rounded-b-none object-fill"
               />
             )}
-            <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
-              {project.name}
+            <div className="flex items-center justify-center">
+              <p className="md:mt-5 p-3 font-bold text-xl bg-gradient-to-r from-green-500 via-teal-600 to-blue-950 bg-clip-text text-transparent">
+                {project.name}
+              </p>
             </div>
           </Link>
         ))}
