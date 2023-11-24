@@ -13,8 +13,8 @@ export default async function Home() {
           Luca
         </span>
       </h1>
-      <p className="mt-3 text-xl text-gray-600">
-        Hello everyone! Check out my projects
+      <p className="mt-5 text-xl text-gray-600">
+        I like MTB 🚵‍♀️, wine 🍷 and building fun projects with the latest tech 👨‍💻
       </p>
 
       <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Projects</h2>

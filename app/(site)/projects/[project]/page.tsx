@@ -13,8 +13,17 @@ export default async function Project({ params }: Props) {
 
   return (
     <div>
-      <header className="flex justify-between items-center">
-        <h1 className="font-extrabold text-5xl drop-shadow bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+      <div className="mb-5 flex items-center justify-start">
+        <Link
+          href={"/"}
+          className="flex flex-row items-center bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-lg font-semibold text-gray-600 transition"
+        >
+          <ArrowLeft className="w-5 h-5" /> <span className="ml-1">Back</span>
+        </Link>
+      </div>
+
+      <header className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
+        <h1 className="font-extrabold text-5xl drop-shadow bg-gradient-to-r from-green-500 via-teal-600 to-blue-950 bg-clip-text text-transparent">
           {project.name}
         </h1>
 
