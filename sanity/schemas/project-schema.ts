@@ -35,6 +35,22 @@ const project = {
       type: "url",
     },
     {
+      name: "githubUrl",
+      title: "",
+      type: "url",
+    },
+    {
+      name: "stack",
+      title: "Tech stack",
+      type: "array",
+      of: [{ type: "string"}]
+    },
+    {
+      name: "isSomethingDisabled",
+      title: "",
+      type: "boolean"
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",
