@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { getPages } from "@/sanity/utils";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import "../globals.css";
 
@@ -23,6 +24,7 @@ export default async function RootLayout({
         <Navbar pages={pages} />
         <main className="mx-auto max-w-7xl p-6 lg:px-8 py-20">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
