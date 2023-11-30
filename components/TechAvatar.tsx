@@ -9,9 +9,17 @@ const TechAvatar = ({ tech }: Props) => {
   let techName = tech.toLowerCase();
 
   switch (techName) {
+    case "pokeapi":
+      source = "/images/pokeapi.png";
+      break;
+    case "mui":
+      source = "/images/mui.png";
+      break;
+    case "reactjs":
+      source = "/images/reactjs.png";
+      break;
     case "openai api":
-      source =
-        "/images/openaiapi.png";
+      source = "/images/openaiapi.png";
       break;
     case "tiptap editor":
       source = "/images/tiptapeditor.png";
