@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { getPages } from "@/sanity/utils";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import "../globals.css";
 
@@ -25,6 +26,7 @@ export default async function RootLayout({
         <main className="mx-auto max-w-7xl p-6 lg:px-8 py-20">{children}</main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
